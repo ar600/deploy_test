@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <thclass='col-1'>id</th>    
+                <thclass='col-3'>Name</th>    
+                <thclass='col-4'>Description</th>    
+                <thclass='col-2'>Actions</th>    
+            </tr>
+        {% for blog in blogs%}
+            <tr>
+                <td class="col-1">{{ blog.id }}</td>
+                <td class="col-3">{{ blog.name }}</td>
+                <td class="col-4">{{ blog.desc }}</td>
+                <td class="col-2"><a href="/blogs/{{ blog.id}}"> SHOW </a>  <a href="/blogs/edit/{{blog.id}}">Edit</a></td>
+            </tr>
+        </table>
+    </body>
+</html>
